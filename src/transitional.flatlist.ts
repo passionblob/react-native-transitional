@@ -48,14 +48,7 @@ const interpolator = new TransitionalInterpolator<ViewStyle>({
 export class TransitionalFlatList<Item> extends Component<FlatListProps<Item> & { config?: TransitionConfig }> {
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<FlatListProps<Item>> = {
-    ListFooterComponentStyle: createStyleHolder(),
-    ListHeaderComponentStyle: createStyleHolder(),
-    columnWrapperStyle: createStyleHolder(),
-    contentContainerStyle: createStyleHolder(),
-    contentInset: createStyleHolder(),
-    hitSlop: createStyleHolder(),
     style: createStyleHolder(),
-    scrollIndicatorInsets: createStyleHolder(),
   }
 
   private progress = 0
@@ -97,13 +90,6 @@ export class TransitionalFlatList<Item> extends Component<FlatListProps<Item> & 
       props: this.props,
       styleHolder: this.styleHolder,
       targets: [
-        "ListFooterComponentStyle",
-        "ListHeaderComponentStyle",
-        "columnWrapperStyle",
-        "contentContainerStyle",
-        "contentInset",
-        "hitSlop",
-        "scrollIndicatorInsets",
         "style"
       ]
     })

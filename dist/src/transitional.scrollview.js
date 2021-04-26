@@ -147,7 +147,7 @@ var TransitionalScrollView = /** @class */ (function (_super) {
                 "scrollIndicatorInsets",
             ]
         });
-        return react_1.default.createElement(react_native_1.Animated.ScrollView, __assign(__assign({}, transitionalStyles), _props), children);
+        return react_1.default.createElement(react_native_1.Animated.ScrollView, __assign(__assign({}, _props), transitionalStyles), children);
     };
     return TransitionalScrollView;
 }(react_1.Component));

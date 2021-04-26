@@ -49,10 +49,6 @@ export class TransitionalSectionList<Item> extends Component<SectionListProps<It
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<SectionListProps<Item>> = {
     style: createStyleHolder(),
-    contentContainerStyle: createStyleHolder(),
-    hitSlop: createStyleHolder(),
-    contentInset: createStyleHolder(),
-    scrollIndicatorInsets: createStyleHolder(),
   }
   private progress = 0
   constructor(props: Readonly<SectionListProps<Item> & { config?: TransitionConfig }>) {
@@ -94,10 +90,6 @@ export class TransitionalSectionList<Item> extends Component<SectionListProps<It
       styleHolder: this.styleHolder,
       targets: [
         "style",
-        "contentContainerStyle",
-        "hitSlop",
-        "contentInset",
-        "scrollIndicatorInsets",
       ]
     })
 

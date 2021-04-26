@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ViewProps } from 'react-native';
+import { ViewProps, ScrollViewProps } from 'react-native';
 import { TransitionConfig } from './types';
-export declare class TransitionalScrollView extends Component<ViewProps & {
+export declare class TransitionalScrollView extends Component<ScrollViewProps & {
     config?: TransitionConfig;
 }> {
     private anim;

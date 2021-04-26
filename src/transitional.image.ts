@@ -47,7 +47,6 @@ const interpolator = new TransitionalInterpolator<ImageStyle>({
 export class TransitionalImage extends Component<ImageProps & { config?: TransitionConfig }> {
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<ImageProps> = {
-    capInsets: createStyleHolder(),
     style: createStyleHolder(),
   }
   private progress = 0
@@ -88,7 +87,7 @@ export class TransitionalImage extends Component<ImageProps & { config?: Transit
       progress: this.progress,
       props: this.props,
       styleHolder: this.styleHolder,
-      targets: ["style", "capInsets"]
+      targets: ["style"]
     })
 
     return React.createElement(

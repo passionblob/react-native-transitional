@@ -49,7 +49,6 @@ export class TransitionalView extends Component<ViewProps & { config?: Transitio
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<ViewProps> = {
     style: createStyleHolder(),
-    hitSlop: createStyleHolder(),
   }
 
   private progress = 0

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Animated, ViewProps, ViewStyle, StyleSheet, ScrollViewProps } from 'react-native'
+import { Animated, ViewProps, ViewStyle, StyleSheet, ScrollViewProps, ScrollView } from 'react-native'
 import { createStyleHolder, getTransitionalStyles, TransitionalInterpolator } from './interpolator'
 import { SpringConfig, StyleHolderOf, TransitionConfig } from './types'
 
@@ -48,10 +48,6 @@ const interpolator = new TransitionalInterpolator<ViewStyle>({
 export class TransitionalScrollView extends Component<ScrollViewProps & { config?: TransitionConfig }> {
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<ScrollViewProps> = {
-    contentContainerStyle: createStyleHolder(),
-    contentInset: createStyleHolder(),
-    hitSlop: createStyleHolder(),
-    scrollIndicatorInsets: createStyleHolder(),
     style: createStyleHolder(),
   }
   private progress = 0
@@ -94,10 +90,6 @@ export class TransitionalScrollView extends Component<ScrollViewProps & { config
       styleHolder: this.styleHolder,
       targets: [
         "style",
-        "hitSlop",
-        "contentContainerStyle",
-        "contentInset",
-        "scrollIndicatorInsets",
       ]
     })
 
