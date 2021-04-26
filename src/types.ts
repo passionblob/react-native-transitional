@@ -1,10 +1,20 @@
 import { Animated, FlexStyle, StyleProp } from "react-native"
 
-export interface SpringConfig extends Omit<Animated.SpringAnimationConfig, "toValue"> {
+export type CommonConfig = {
+    onTransitionEnd?: () => any
+}
+
+export type SpringConfig =
+Omit<Animated.SpringAnimationConfig, "toValue">
+& CommonConfig
+& {
     type: "spring"
 }
 
-export interface TimingConfig extends Omit<Animated.TimingAnimationConfig, "toValue"> {
+export type TimingConfig =
+Omit<Animated.TimingAnimationConfig, "toValue">
+& CommonConfig
+& {
     type: "timing"
 }
 

@@ -77,15 +77,15 @@ export class TransitionalText extends Component<TextProps & { config?: Transitio
         toValue: 1,
         duration: 300,
         ...config,
-      }).start()
+      }).start(config.onTransitionEnd)
     } else {
       Animated.spring(this.anim, {
         toValue: 1,
         ...config as SpringConfig,
-      }).start()
+      }).start(config?.onTransitionEnd)
     }
   }
-
+  
   render(): React.ReactNode {
     const { children, ..._props } = this.props
     const transitionalStyles = getTransitionalStyles<TextProps>({

@@ -73,12 +73,12 @@ export class TransitionalScrollView extends Component<ViewProps & { config?: Tra
         toValue: 1,
         duration: 300,
         ...config,
-      }).start()
+      }).start(config.onTransitionEnd)
     } else {
       Animated.spring(this.anim, {
         toValue: 1,
         ...config as SpringConfig,
-      }).start()
+      }).start(config?.onTransitionEnd)
     }
   }
 

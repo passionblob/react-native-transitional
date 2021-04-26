@@ -69,12 +69,12 @@ export class TransitionalImage extends Component<ImageProps & { config?: Transit
         toValue: 1,
         duration: 300,
         ...config,
-      }).start()
+      }).start(config.onTransitionEnd)
     } else {
       Animated.spring(this.anim, {
         toValue: 1,
         ...config as SpringConfig,
-      }).start()
+      }).start(config?.onTransitionEnd)
     }
   }
   
