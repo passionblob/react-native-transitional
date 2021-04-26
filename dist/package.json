@@ -1,6 +1,6 @@
 {
   "name": "react-native-transitional",
-  "version": "1.11.28",
+  "version": "1.13.5",
   "main": "index.js",
   "dependencies": {
     "@monthem/utils": "^1.0.0",
