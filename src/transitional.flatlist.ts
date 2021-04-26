@@ -72,8 +72,6 @@ export class TransitionalFlatList<Item> extends Component<FlatListProps<Item> & 
     this.anim.stopAnimation()
     this.anim.setValue(0)
 
-    if (config?.onTransitionStart) config.onTransitionStart()
-
     if (config?.type === "timing") {
       Animated.timing(this.anim, {
         toValue: 1,
