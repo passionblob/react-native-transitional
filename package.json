@@ -1,10 +1,7 @@
 {
   "name": "react-native-transitional",
-  "version": "1.10.3",
-  "main": "dist/src/index.js",
-  "files": [
-    "dist/*"
-  ],
+  "version": "1.10.9",
+  "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && yarn tsc"
