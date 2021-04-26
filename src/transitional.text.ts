@@ -72,6 +72,8 @@ export class TransitionalText extends Component<TextProps & { config?: Transitio
     this.anim.stopAnimation()
     this.anim.setValue(0)
 
+    if (config?.onTransitionStart) config.onTransitionStart()
+
     if (config?.type === "timing") {
       Animated.timing(this.anim, {
         toValue: 1,
@@ -85,7 +87,7 @@ export class TransitionalText extends Component<TextProps & { config?: Transitio
       }).start(config?.onTransitionEnd)
     }
   }
-  
+
   render(): React.ReactNode {
     const { children, ..._props } = this.props
     const transitionalStyles = getTransitionalStyles<TextProps>({

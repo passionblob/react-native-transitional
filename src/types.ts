@@ -1,6 +1,7 @@
 import { Animated, FlexStyle, StyleProp } from "react-native"
 
 export type CommonConfig = {
+    onTransitionStart?: () => any
     onTransitionEnd?: () => any
 }
 
