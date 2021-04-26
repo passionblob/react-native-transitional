@@ -1,6 +1,5 @@
 import { Animated, FlexStyle, StyleProp } from "react-native";
 export declare type CommonConfig = {
-    onTransitionStart?: () => any;
     onTransitionEnd?: Animated.EndCallback;
     useNativeDriver?: boolean;
 };

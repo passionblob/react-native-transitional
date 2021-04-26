@@ -119,8 +119,6 @@ var TransitionalImage = /** @class */ (function (_super) {
         var config = this.props.config;
         this.anim.stopAnimation();
         this.anim.setValue(0);
-        if (config === null || config === void 0 ? void 0 : config.onTransitionStart)
-            config.onTransitionStart();
         if ((config === null || config === void 0 ? void 0 : config.type) === "timing") {
             react_native_1.Animated.timing(this.anim, __assign({ toValue: 1, duration: 300, useNativeDriver: config.useNativeDriver || false }, config)).start(config.onTransitionEnd);
         }
@@ -138,7 +136,7 @@ var TransitionalImage = /** @class */ (function (_super) {
             styleHolder: this.styleHolder,
             targets: ["style", "capInsets"]
         });
-        return react_1.default.createElement(react_native_1.Animated.View, __assign(__assign({}, _props), transitionalStyles), children);
+        return react_1.default.createElement(react_native_1.Animated.Image, __assign(__assign({}, _props), transitionalStyles), children);
     };
     return TransitionalImage;
 }(react_1.Component));

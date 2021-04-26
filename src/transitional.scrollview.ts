@@ -45,7 +45,7 @@ const interpolator = new TransitionalInterpolator<ViewStyle>({
   }
 })
 
-export class TransitionalScrollView extends Component<ViewProps & { config?: TransitionConfig }> {
+export class TransitionalScrollView extends Component<ScrollViewProps & { config?: TransitionConfig }> {
   private anim = new Animated.Value(1)
   private styleHolder: StyleHolderOf<ScrollViewProps> = {
     contentContainerStyle: createStyleHolder(),
@@ -103,7 +103,7 @@ export class TransitionalScrollView extends Component<ViewProps & { config?: Tra
 
     return React.createElement(
       Animated.ScrollView,
-      { ...transitionalStyles, ..._props },
+      { ..._props, ...transitionalStyles },
       children,
     )
   }
