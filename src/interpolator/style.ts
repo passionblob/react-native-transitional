@@ -1,7 +1,7 @@
 import { ColorValue, Animated } from "react-native"
 import chroma from "chroma-js"
 
-import { anyOf } from "../../utils"
+import { anyOf } from "@monthem/utils"
 import { interpolateNumber } from "./common"
 
 const getRgbaString = (color: ColorValue) => {
@@ -105,7 +105,7 @@ export const mapLayoutToAnimated = (
         }),
         height: animated.interpolate({
             inputRange: [0, 1],
-            outputRange: [prev.width, next.width]
+            outputRange: [prev.height, next.height]
         }),
     }
 }

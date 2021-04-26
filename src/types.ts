@@ -2,21 +2,22 @@ import { Animated, FlexStyle, StyleProp } from "react-native"
 
 export type CommonConfig = {
     onTransitionStart?: () => any
-    onTransitionEnd?: () => any
+    onTransitionEnd?: Animated.EndCallback
+    useNativeDriver?: boolean
 }
 
 export type SpringConfig =
-Omit<Animated.SpringAnimationConfig, "toValue">
+Omit<Animated.SpringAnimationConfig, "toValue" | "useNativeDriver">
 & CommonConfig
 & {
-    type: "spring"
+    type?: "spring"
 }
 
 export type TimingConfig =
-Omit<Animated.TimingAnimationConfig, "toValue">
+Omit<Animated.TimingAnimationConfig, "toValue" | "useNativeDriver">
 & CommonConfig
 & {
-    type: "timing"
+    type?: "timing"
 }
 
 export type TransitionConfig = SpringConfig | TimingConfig

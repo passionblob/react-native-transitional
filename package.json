@@ -1,11 +1,11 @@
 {
   "name": "react-native-transitional",
-  "version": "1.13.6",
+  "version": "1.13.8",
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && muix bundle -m index.js",
-    "publishDist": "yarn build && cd dist && yarn publish && cd .. && yarn version --patch --silent"
+    "deploy": "yarn build && cd dist && yarn publish && cd .. && yarn muix sync-version -i ./dist/package.json"
   },
   "dependencies": {
     "@monthem/utils": "^1.0.0",
@@ -23,16 +23,9 @@
     "json-to-ts": "^1.7.0",
     "typescript": "^4.2.4"
   },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-native": "^0.64.0"
-  },
+  "peerDependencies": {"react": "^17.0.2", "react-native": "^0.64.0"},
   "author": "monthem <lpoeh01@gmail.com>",
-  "keywords": [
-    "animation"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "keywords": ["animation"],
+  "publishConfig": {"access": "public"},
   "description": ""
 }

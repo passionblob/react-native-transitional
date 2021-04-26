@@ -1,5 +1,5 @@
 import { Animated, StyleSheet } from "react-native"
-import { keysOf } from "../../utils"
+import { keysOf } from "@monthem/utils"
 import { StyleHolder, StyleHolderOf, StyleInterpolator, AnimatedStyleMapper } from "../types"
 import {
 	interpolateNumber,

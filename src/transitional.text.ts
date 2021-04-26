@@ -78,11 +78,13 @@ export class TransitionalText extends Component<TextProps & { config?: Transitio
       Animated.timing(this.anim, {
         toValue: 1,
         duration: 300,
+        useNativeDriver: config.useNativeDriver || false,
         ...config,
       }).start(config.onTransitionEnd)
     } else {
       Animated.spring(this.anim, {
         toValue: 1,
+        useNativeDriver: config?.useNativeDriver || false,
         ...config as SpringConfig,
       }).start(config?.onTransitionEnd)
     }
