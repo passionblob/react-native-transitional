@@ -100,7 +100,7 @@ export class TransitionalText extends Component<TextProps & { config?: Transitio
     })
 
     return React.createElement(
-      Animated.View,
+      Animated.Text,
       { ..._props, ...transitionalStyles },
       children,
     )

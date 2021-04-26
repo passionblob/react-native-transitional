@@ -67,7 +67,7 @@ export class TransitionalSectionList<Item> extends Component<SectionListProps<It
 
     this.anim.stopAnimation()
     this.anim.setValue(0)
-    
+
     if (config?.type === "timing") {
       Animated.timing(this.anim, {
         toValue: 1,
@@ -102,7 +102,7 @@ export class TransitionalSectionList<Item> extends Component<SectionListProps<It
     })
 
     return React.createElement(
-      Animated.View,
+      Animated.SectionList,
       { ..._props, ...transitionalStyles },
       children,
     )

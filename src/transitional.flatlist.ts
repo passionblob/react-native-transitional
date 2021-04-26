@@ -109,7 +109,7 @@ export class TransitionalFlatList<Item> extends Component<FlatListProps<Item> & 
     })
 
     return React.createElement(
-      Animated.View,
+      Animated.FlatList,
       { ..._props, ...transitionalStyles },
       children,
     )

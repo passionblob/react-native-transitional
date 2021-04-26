@@ -92,7 +92,7 @@ export class TransitionalImage extends Component<ImageProps & { config?: Transit
     })
 
     return React.createElement(
-      Animated.View,
+      Animated.Image,
       { ..._props, ...transitionalStyles },
       children,
     )

@@ -102,7 +102,7 @@ export class TransitionalScrollView extends Component<ViewProps & { config?: Tra
     })
 
     return React.createElement(
-      Animated.View,
+      Animated.ScrollView,
       { ...transitionalStyles, ..._props },
       children,
     )
