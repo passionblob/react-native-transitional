@@ -23,19 +23,11 @@
     "react-native": "^0.64.0"
   },
   "author": "monthem <lpoeh01@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/passionblob/react-native-transitional.git"
-  },
   "keywords": [
     "animation"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "bugs": {
-    "url": "https://github.com/passionblob/react-native-transitional/issues"
-  },
-  "homepage": "https://github.com/passionblob/react-native-transitional#readme",
   "description": ""
 }
