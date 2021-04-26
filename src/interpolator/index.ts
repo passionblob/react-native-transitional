@@ -1,5 +1,5 @@
 import { Animated, StyleSheet } from "react-native"
-import { keysOf } from "../../../muix-components/src/utils"
+import { keysOf } from "../../utils"
 import { StyleHolder, StyleHolderOf, StyleInterpolator, AnimatedStyleMapper } from "../types"
 import {
 	interpolateNumber,

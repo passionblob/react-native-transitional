@@ -1,7 +1,7 @@
 import { ColorValue, Animated } from "react-native"
 import chroma from "chroma-js"
 
-import { anyOf } from "../../../muix-components/src/utils"
+import { anyOf } from "../../utils"
 import { interpolateNumber } from "./common"
 
 const getRgbaString = (color: ColorValue) => {
