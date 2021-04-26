@@ -1,7 +1,7 @@
 {
   "name": "react-native-transitional",
-  "version": "1.1.2",
-  "main": "dist/react-native-transitional/src/index.js",
+  "version": "1.10.3",
+  "main": "dist/src/index.js",
   "files": [
     "dist/*"
   ],
