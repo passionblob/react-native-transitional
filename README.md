@@ -16,3 +16,4 @@
 <Transitional.View config={{...configuration...}} />
 
 ```
+### You can try at [HERE](https://codesandbox.io/s/react-native-transitional-showcase-tzmov?file=/src/exmaple/showcase.tsx)
